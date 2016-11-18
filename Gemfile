@@ -1,4 +1,4 @@
-source: 'http://www.rubygems.org'
+source: 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'shotgun'
@@ -18,5 +18,4 @@ gem 'dotenv'
 
 group :development do
 	gem 'pg'
-	
 end
