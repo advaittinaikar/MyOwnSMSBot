@@ -40,8 +40,9 @@ get '/send_sms' do
 end
 
 get '/incoming_sms' do
+
 	session['counter']||=0
-	count=session['count']
+	count=session['counter']
 
 	sender=params[:From]||=''
 	#receiver=params[:To]||=''
@@ -59,6 +60,7 @@ get '/incoming_sms' do
 	# 	:to=>sender,
 	# 	:body=>message
 	# }
+	session['counter'] += 1
 
 	twiml= Twilio::TwiML::Response.new do |t|
 		t.Message message	
@@ -67,6 +69,7 @@ get '/incoming_sms' do
 	content_type 'text/xml'
 
 	twiml.text
+
 end
 
 error '401' do
