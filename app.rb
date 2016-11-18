@@ -31,7 +31,7 @@ get '/from' do
 end
 
 get '/send_sms' do
-	client.account.Messages.create(
+	client.account.messages.create(
 		:from => ENV['TWILIO_FROM'],
 		:to=> "+16462580532",
 		:body=> "You've just asked to send a message to yourself!"
