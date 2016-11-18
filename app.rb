@@ -8,9 +8,9 @@ require 'shotgun'
 
 require 'rake'
 
-configure :development do
-	require 'pg'
-end
+# configure :development do
+# 	require 'pg'
+# end
 
 enable :sessions
 
