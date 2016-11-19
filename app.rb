@@ -60,7 +60,7 @@ get '/incoming_sms' do
 	# 	:to=>sender,
 	# 	:body=>message
 	# }
-	session['counter'] += 1
+	count += 1
 
 	twiml= Twilio::TwiML::Response.new do |t|
 		t.Message message	
